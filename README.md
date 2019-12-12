@@ -1,2 +1,2 @@
-# rest-api-design-course_versioning
+# rest-api-design-course-versioning
 Rest Api design course - second seasson - versioning
