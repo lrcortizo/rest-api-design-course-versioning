@@ -6,8 +6,8 @@ import java.util.function.Function;
 import org.jooq.lambda.Seq;
 import org.springframework.stereotype.Component;
 
-import io.trabe.teaching.rest.model.pojo.backend.BackendOperation;
 import io.trabe.teaching.rest.model.pojo.Operation;
+import io.trabe.teaching.rest.model.pojo.backend.BackendOperation;
 
 @Component
 class OperationConverter {

@@ -1,20 +1,20 @@
 package io.trabe.teaching.rest.restassured;
 
-import java.util.Calendar;
-
-import org.junit.Test;
-
-import io.trabe.teaching.rest.model.pojo.api.external.common.ApiAccount;
-import io.trabe.teaching.rest.model.pojo.api.external.common.ApiAccountCreationRequest;
-import io.trabe.teaching.rest.model.pojo.api.external.common.ApiAccountKind;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
+
+import java.util.Calendar;
+
+import org.junit.Test;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.trabe.teaching.rest.model.pojo.api.external.common.ApiAccount;
+import io.trabe.teaching.rest.model.pojo.api.external.common.ApiAccountCreationRequest;
+import io.trabe.teaching.rest.model.pojo.api.external.common.ApiAccountKind;
 
 public class TestAccountApi {
     ObjectMapper mapper = new ObjectMapper();

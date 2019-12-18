@@ -1,5 +1,7 @@
 package io.trabe.teaching.rest.model.service;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.Calendar;
 
 import org.junit.Before;
@@ -13,14 +15,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import io.trabe.teaching.rest.model.accessor.AccountAccessor;
+import io.trabe.teaching.rest.model.accessor.OperationAccessor;
 import io.trabe.teaching.rest.model.accessor.PaymentMethodAccessor;
 import io.trabe.teaching.rest.model.pojo.Account;
 import io.trabe.teaching.rest.model.pojo.AccountKind;
 import io.trabe.teaching.rest.model.pojo.backend.BackendAccount;
-import io.trabe.teaching.rest.model.accessor.OperationAccessor;
 import io.trabe.teaching.rest.model.service.mapper.AccountMapper;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

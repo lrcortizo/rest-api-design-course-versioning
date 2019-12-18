@@ -6,8 +6,8 @@ import java.util.function.Function;
 import org.jooq.lambda.Seq;
 import org.springframework.stereotype.Component;
 
-import io.trabe.teaching.rest.model.pojo.backend.BackendPaymentMethod;
 import io.trabe.teaching.rest.model.pojo.PaymentMethod;
+import io.trabe.teaching.rest.model.pojo.backend.BackendPaymentMethod;
 
 @Component
 class PaymentMethodConverter {

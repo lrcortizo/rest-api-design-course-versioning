@@ -5,9 +5,9 @@ import java.util.function.Function;
 
 import org.springframework.stereotype.Component;
 
-import io.trabe.teaching.rest.model.pojo.backend.BackendUser;
 import io.trabe.teaching.rest.model.pojo.Account;
 import io.trabe.teaching.rest.model.pojo.User;
+import io.trabe.teaching.rest.model.pojo.backend.BackendUser;
 
 @Component
 class UserConverter {

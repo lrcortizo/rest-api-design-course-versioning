@@ -2,12 +2,12 @@ package io.trabe.teaching.rest.model.pojo.api.external.common;
 
 import java.util.Calendar;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Builder
 @NoArgsConstructor
