@@ -57,6 +57,6 @@ public class PublicapiAccessorImpl implements PublicapiAccessor {
     
     @Override
     public void deleteUser(Long id) {
-    	restTemplate.delete(UriComponentsBuilder.fromHttpUrl(ACCOUNTS_URL).buildAndExpand(id).toUri());
+    	restTemplate.delete(UriComponentsBuilder.fromHttpUrl(USER_URL).buildAndExpand(id).toUri());
     }
 }

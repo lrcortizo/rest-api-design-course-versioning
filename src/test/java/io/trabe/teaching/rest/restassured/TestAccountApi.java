@@ -21,7 +21,7 @@ public class TestAccountApi {
 
     @Test
     public void testSchema() {
-        when().get("http://localhost:8080/api/public/1/users/{login}/accounts","marcos").then().
+        when().get("http://localhost:8080/api/public/1/users/{id}/accounts",1L).then().
                 assertThat().
                 body(matchesJsonSchemaInClasspath("accounts-schema.json"));
     }
@@ -29,7 +29,7 @@ public class TestAccountApi {
     @Test
     public void testGetAccounts() {
         when().
-                get("http://localhost:8080/api/public/1/users/marcos/accounts").
+                get("http://localhost:8080/api/public/1/users/1/accounts").
                 then()
                 .statusCode(200)
                 .body("code", hasItems("ES43INGB2596749386", "CH3489144371634777488"))
