@@ -11,4 +11,6 @@ public interface PublicapiAccessor {
     Account createAccount(String userLogin, Account account);
 
     Account getAccount(Long id);
+    
+    void deleteUser(Long id);
 }

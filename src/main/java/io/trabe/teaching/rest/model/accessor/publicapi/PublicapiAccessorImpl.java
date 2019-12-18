@@ -17,6 +17,7 @@ import io.trabe.teaching.rest.model.pojo.api.external.common.ApiAccount;
 public class PublicapiAccessorImpl implements PublicapiAccessor {
 
     private static final String ACCOUNTS_URL = "http://localhost:8080/api/public/1/users/{userId}/accounts";
+    private static final String USER_URL = "http://localhost:8080/api/public/1/users";
     private final RestTemplate restTemplate;
     private final PublicApiMapper publicApiMapper;
 
@@ -35,6 +36,8 @@ public class PublicapiAccessorImpl implements PublicapiAccessor {
                         ApiAccount[].class));
         return publicApiMapper.toAccounts(apiAccounts);
     }
+    
+    
 
     @Override
     public Account createAccount(String userLogin, Account account) {
@@ -50,5 +53,10 @@ public class PublicapiAccessorImpl implements PublicapiAccessor {
     @Override
     public Account getAccount(Long id) {
         return null;
+    }
+    
+    @Override
+    public void deleteUser(Long id) {
+    	restTemplate.delete(UriComponentsBuilder.fromHttpUrl(ACCOUNTS_URL).buildAndExpand(id).toUri());
     }
 }

@@ -25,4 +25,9 @@ public class ConsumeApiServiceImpl implements ConsumeApiService {
     public Account createAccount(String userLogin, Account account) {
         return publicapiAccessor.createAccount(userLogin, account);
     }
+    
+    @Override
+    public void deleteUser(Long id) {
+    	publicapiAccessor.deleteUser(id);
+    }
 }
