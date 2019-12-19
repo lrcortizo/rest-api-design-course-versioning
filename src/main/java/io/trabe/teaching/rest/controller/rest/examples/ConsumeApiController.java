@@ -10,20 +10,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.trabe.teaching.rest.model.pojo.Account;
 import io.trabe.teaching.rest.model.service.ConsumeApiService;
+import io.trabe.teaching.rest.model.service.CosumeTokenService;
 
 @RestController
 @RequestMapping("/api/examples/1/consume-accounts/users")
 public class ConsumeApiController {
 
     private final ConsumeApiService consumeApiService;
+    
+    private CosumeTokenService consumeTokenService;
 
 
-    public ConsumeApiController(ConsumeApiService consumeApiService) {
+    public ConsumeApiController(ConsumeApiService consumeApiService, CosumeTokenService consumeTokenService) {
         this.consumeApiService = consumeApiService;
+        this.consumeTokenService = consumeTokenService;
     }
 
     @GetMapping(value = "/{userId}/accounts")
     public List<Account> userAccounts(@PathVariable String userId) {
+    	consumeTokenService.generateToken();
+    	
         return consumeApiService.getAccountsByUserLogin(userId);
     }
     
